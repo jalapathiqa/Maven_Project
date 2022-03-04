@@ -17,28 +17,28 @@ public class Handle_Windows {
 
 	public static void main(String[] args) throws InterruptedException {
 
-//		WebDriverManager.chromedriver().setup();
-//		
-//		// create objects of Hashmap class
-//		Map<String, Object> prefs = new HashMap<String, Object>();
-//		ChromeOptions options = new ChromeOptions();
-//		
-//		// set the notification setting it will override the default setting
-//		prefs.put("profile.default_content_setting_values.notifications", 2);
-//		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
-//		options.addArguments("disable-notifications");
-//		options.setExperimentalOption("prefs", prefs);
-////		options.addArguments("--headless");
-//		WebDriver driver = new ChromeDriver(options);
-//		driver.manage().window().maximize();
-//		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
-//		Thread.sleep(2000);
-
-		WebDriverManager.firefoxdriver().setup();
-		WebDriver driver = new FirefoxDriver();
+		WebDriverManager.chromedriver().setup();
+		
+		// create objects of Hashmap class
+		Map<String, Object> prefs = new HashMap<String, Object>();
+		ChromeOptions options = new ChromeOptions();
+		
+		// set the notification setting it will override the default setting
+		prefs.put("profile.default_content_setting_values.notifications", 2);
+		options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+		options.addArguments("disable-notifications");
+		options.setExperimentalOption("prefs", prefs);
+//		options.addArguments("--headless");
+		WebDriver driver = new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 		Thread.sleep(2000);
+
+//		WebDriverManager.firefoxdriver().setup();
+//		WebDriver driver = new FirefoxDriver();
+//		driver.manage().window().maximize();
+//		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+//		Thread.sleep(2000);
 
 //		// Singlw Window:
 //		
@@ -85,7 +85,7 @@ public class Handle_Windows {
 				System.out.println(driver.findElement(By.id("output")).getText());
 				Thread.sleep(3000);
 				driver.close();
-				
+
 			}
 
 //					System.out.println(windowHandle + driver.getTitle());
