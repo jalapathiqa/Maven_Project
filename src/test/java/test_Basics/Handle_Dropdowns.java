@@ -50,18 +50,14 @@ public class Handle_Dropdowns {
 			System.out.println(courses.getText());
 		}
 
-		// multiple select:
-		
+		// multiple select:		
 		System.out.println("******* ide drop down options *******");
-
 		WebElement ideElement = driver.findElement(By.id("ide"));
-
 		Select ideDropDown = new Select(ideElement);
 		List<WebElement> ideOptions = ideDropDown.getOptions();
 		for (WebElement webElement : ideOptions) {
 			System.out.println(webElement.getText());
-		}
-		
+		}		
 		ideDropDown.selectByIndex(0);
 		System.out.println("select eclipse: "+ideElement.getText());
 		Thread.sleep(3000);
@@ -70,12 +66,10 @@ public class Handle_Dropdowns {
 		System.out.println("select Intelli J: "+ideElement.getText());
 		Thread.sleep(3000);
 
-		
 		ideDropDown.selectByVisibleText("NetBeans");
 		System.out.println("Select NB: "+ideElement.getText());
 		Thread.sleep(3000);
 
-		
 		ideDropDown.deselectByVisibleText("IntelliJ IDEA");
 		Thread.sleep(3000);
 		
@@ -86,6 +80,5 @@ public class Handle_Dropdowns {
 			System.out.println(SelectedList.getText());
 		}
 
-		
 	}
 }
