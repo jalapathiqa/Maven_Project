@@ -17,7 +17,7 @@ import org.testng.annotations.DataProvider;
 public class ReadExcel {
 
 	@DataProvider
-	public String [][] getData() throws IOException {
+	public Object [][] getData() throws IOException {
 
 		File excelFile = new File("C:\\Users\\kalag\\OneDrive\\Desktop\\Workspace\\Maven_Project\\TestData\\Data.xlsx");
 
@@ -30,7 +30,7 @@ public class ReadExcel {
 		int noOfColumns = sheet.getRow(0).getLastCellNum();
 //		System.out.println(sheet.getLastRowNum());
 
-		String [][] data = new String [noOfRows-1][noOfColumns];
+		Object [][] data = new Object [noOfRows-1][noOfColumns];
 		for (int i = 0; i < noOfRows-1; i++) {
 			
 			for (int j = 0; j < noOfColumns; j++) {
@@ -49,10 +49,10 @@ public class ReadExcel {
 		
 		Arrays.toString(data);
 		
-		for (String[] dataArr : data) {
+//		for (String[] dataArr : data) {
 //			System.out.println(Arrays.toString(dataArr));
-			
-		}
+//			
+//		}
 		return data;
 
 	}
