@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="listeners.TestClass1">
+      <class name="testNG.openBrowser_Assertions">
         <methods>
-          <include name="testMethod3"/>
-          <include name="testMethod4"/>
-          <include name="testMethod2"/>
+          <include name="openFB"/>
         </methods>
-      </class> <!-- listeners.TestClass1 -->
+      </class> <!-- testNG.openBrowser_Assertions -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

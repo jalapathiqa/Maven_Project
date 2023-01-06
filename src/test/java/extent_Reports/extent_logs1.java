@@ -25,7 +25,7 @@ public class extent_logs1 {
 	public static void main(String[] args) throws IOException {
 		
 		com.aventstack.extentreports.ExtentReports extent = new com.aventstack.extentreports.ExtentReports();
-		File file = new File("extentReport.html");
+		File file = new File("./ExtentReports/"+"extentReports.html");
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter(file);
 		extent.attachReporter(sparkReporter);
 		
